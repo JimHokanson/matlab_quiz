@@ -1,0 +1,46 @@
+classdef presenter < handle
+    %
+    %   Class:
+    %   matlab_quiz.presenter
+    
+    %{
+        matlab_quiz.presenter
+    %}
+    
+    %relevant tags
+    %------------------------
+    %ID
+    %answer
+    %question
+    %show_hint
+    %tags
+    %difficulty
+    %previous
+    %next
+    
+    properties
+        h
+        cur_question_id
+    end
+    
+    methods
+        function obj = presenter()
+            obj.h = matlab_quiz.presenter_app;
+            obj.h
+        end
+        function previous(obj)
+            
+        end
+        function next(obj)
+            
+        end
+        function showHint(obj)
+            
+        end
+        function showAnwer(obj)
+            
+        end
+        function loadQuestion(
+    end
+end
+
