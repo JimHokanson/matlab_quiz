@@ -24,7 +24,7 @@ classdef data < handle
             obj.questions = temp.question;
             obj.answers = temp.answer;
             obj.hints = temp.hint;
-            obj.tags = cellfun(@(x) split(x,';'),temp.tags,'un',0);
+            obj.tags = cellfun(@h__splitTags,temp.tags,'un',0);
             obj.difficulty_levels = temp.difficulty_level;
             obj.author = temp.author;
             obj.creation_dates = temp.creation_date;
@@ -32,3 +32,6 @@ classdef data < handle
     end
 end
 
+function tags = h__splitTags(tag_string)
+    tags = regexp(tag_string,'\s*;\s*','split');
+end
