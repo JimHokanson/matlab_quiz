@@ -23,7 +23,7 @@ classdef presenter < handle
     %next
     
     properties
-        h
+        h 
         data
         cur_question_id = 1
         cur_answer
@@ -39,10 +39,12 @@ classdef presenter < handle
             obj.cur_question_id = 1;
             obj.loadQuestion(); 
             
-            obj.h.next.ButtonPushedFcn = @(~,~)obj.next();
-            obj.h.previous.ButtonPushedFcn = @(~,~)obj.previous();
-            obj.h.show_hint.ButtonPushedFcn = @(~,~)obj.showHint();
-            obj.h.show_answer.ButtonPushedFcn = @(~,~)obj.showAnswer();
+            obj.h.previous.ButtonPushedFcn = @(~,~) obj.previous();
+            obj.h.next.ButtonPushedFcn = @(~,~) obj.next();
+            obj.h.show_hint.ButtonPushedFcn = @(~,~) obj.showHint();
+            obj.h.show_answer.ButtonPushedFcn = @(~,~) obj.showAnswer();
+
+
         end
         function previous(obj)
             obj.cur_question_id = obj.cur_question_id - 1;
@@ -84,3 +86,11 @@ classdef presenter < handle
     end
 end
 
+
+%{
+            obj.h.next.ButtonPushedFcn = @(~,~)obj.next();
+            obj.h.previous.ButtonPushedFcn = @(~,~)obj.previous();
+            obj.h.show_hint.ButtonPushedFcn = @(~,~)obj.showHint();
+            obj.h.show_answer.ButtonPushedFcn = @(~,~)obj.showAnswer();
+
+%}
